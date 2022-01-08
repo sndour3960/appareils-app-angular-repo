@@ -1,0 +1,12 @@
+<div class="container" *ngIf="appareils">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h1>Mes appareils</h1>
+            <ul class="list-group" *ngFor="let appareil of appareils; let i =index">
+                <app-appareil-view [appareil]="appareil" [indexOfAppareil]="i"></app-appareil-view>
+            </ul>
+            <button class="btn btn-sm btn-success" (click)="onSwitchOnAll()">Tout allumer</button> &nbsp; &nbsp;
+            <button class="btn btn-sm btn-danger" (click)="onSwitchOffAll()">Tout éteindre</button>
+        </div>
+    </div>
+</div>

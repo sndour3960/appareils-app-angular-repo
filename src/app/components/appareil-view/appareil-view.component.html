@@ -1,0 +1,7 @@
+
+<li class="list-group-item" 
+    [ngClass]="{'list-group-item-success': appareil.status==='allumé',
+    'list-group-item-danger': appareil.status==='éteint'}" *ngIf="appareil"> Appareil : {{ appareil.name }} -- Status :  {{ appareil.status }} 
+    <br/><br/><button class="btn btn-sm btn-success" [disabled]=" appareil.status==='allumé'" (click)="onSwitchOnOne()">Allumer</button> &nbsp; &nbsp;
+    <button class="btn btn-sm btn-danger" (click)="onSwitchOffOne()" [disabled]=" appareil.status==='éteint'"> Eteindre</button>
+</li>
